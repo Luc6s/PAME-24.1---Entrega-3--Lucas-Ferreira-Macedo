@@ -1,0 +1,195 @@
+/* Menu styles */
+.nav {
+  width: 100%;
+  background-color: #0070f3;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-family: 'Arial', sans-serif;
+}
+
+.ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.li {
+  flex: 1;
+  text-align: center;
+}
+
+.a {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff; /* Define o contorno das letras */
+  text-decoration: none;
+  font-size: 1.5rem; /* Aumenta o tamanho da fonte */
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  width: 100%;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.a:hover,
+.a.active {
+  background-color: #005bb5;
+  border-radius: 5px;
+}
+
+.currentPage {
+  color: #fff; /* Preenche o texto para a página inicial */
+  -webkit-text-stroke: none; /* Remove o contorno */
+}
+
+/* Dashboard styles */
+.container {
+  padding-top: 4rem; /* Espaço para o menu fixo */
+}
+
+.feedContainer {
+  display: flex;
+  justify-content: center;
+  background-color: #e6e6e6; /* Ajustar a cor de fundo para um contraste menor */
+  min-height: 100vh;
+  width: 100%;
+  margin: 0; /* Remove margens para garantir que se estenda até as bordas */
+}
+
+.sidebar,
+.sidebarRight {
+  flex: 1;
+  background-color: #ccc; /* Ajustar a cor de fundo para um contraste menor */
+  padding: 1rem;
+}
+
+.feed {
+  width: 70%;
+  max-width: 842px; /* Largura de uma folha A4 */
+  aspect-ratio: 1 / 1.414; /* Proporção de uma folha A4 */
+  background-color: #fff;
+  padding: 2rem;
+  margin: 0 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileSection {
+  border: 1px solid #000; /* Borda fina preta */
+  padding: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.profilePicture {
+  width: 100px;
+  height: 100px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+  border: 2px solid #000; /* Borda preta */
+  border-radius: 50%;
+  
+}
+
+.description {
+  text-align: center;
+}
+
+.description h2 {
+  margin-bottom: 1rem;
+}
+
+.largePhoto {
+  width: 70%;
+  height: 0;
+  padding-bottom: 70%;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+  border: 1px solid #000; 
+  text-align: center;
+  line-height: 1; 
+  position: relative;
+  border-radius: 20px;
+}
+
+.largePhoto::before {
+  content: 'Publicação';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.actionButton {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0070f3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.actionButton:hover {
+  background-color: #005bb5;
+}
+
+.post {
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+}
+
+@media (max-width: 400px) {
+  .form {
+    width: 90%;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .button {
+    margin: 0.5rem 0;
+  }
+}
